@@ -80,7 +80,7 @@ scanf("%d", &x);
 
     case 1:
     printf("You have selected a snickers bar. Quantity: %d Price: %.2f \n", AQ , AP );
-    printf("Please confirm your purchase (0/1)");
+    printf("Please confirm your purchase (y/n)");
     scanf("%d", &y);
     IP = AP;
     quantity= AQ;
@@ -91,7 +91,7 @@ scanf("%d", &x);
 
     case 2:
     printf("You have selected a Water bottle. Quantity: %d Price: %.2f \n", BQ , BP );
-    printf("Please confirm your purchase (0/1)");
+    printf("Please confirm your purchase (y/n)");
     scanf("%d", &y);
     IP = BP;
     quantity= BQ;
@@ -102,7 +102,7 @@ scanf("%d", &x);
     
     case 3:
     printf("You have selected a gatorade bottle. Quantity: %d Price: %.2f \n", CQ , CP );
-    printf("Please confirm your purchase (0/1)");
+    printf("Please confirm your purchase (y/n)");
     scanf("%d", &y);
     IP = CP;
     quantity= CQ;
@@ -166,7 +166,7 @@ scanf("%d", &x);
    }
    else{
     printf("Incorrect password, please try again \n");
-    return;
+   // return;
    }
  while(z!= 0){
     printf("1.replenish items \n");
@@ -180,9 +180,10 @@ scanf("%d", &x);
 
     case 1:
     printf("Choose an item to restock\n");
-    printf("Item 1 has a stock of %d \n" , AQ);
-    printf("Item 2 has a stock of %d \n" , BQ);
-    printf("Item 3 has a stock of %d \n" , CQ);
+    printf("1.Item 1 %d \n" , AQ);
+    printf("2.Item 2 %d \n" , BQ);
+    printf("3.Item 3 %d \n" , CQ);
+    printf("4.Restock all items\n");
     scanf("%d" , &a);
     switch(a){
         case 1:
@@ -194,6 +195,10 @@ scanf("%d", &x);
         case 3:
         CQ = rand()%20 + 1 + CQ ;
         break;
+        case4:
+        AQ = rand()% 20 + 1 + AQ ;
+         BQ = rand()% 20 + 1 + BQ ;
+        CQ = rand()%20 + 1 + CQ ;
         default:
         printf("Chose a valid item ");
     }
