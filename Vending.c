@@ -235,7 +235,7 @@ scanf("%d", &x);
     case 4:
     printf("1. Snickers | %.2f aed | %d items available \n" , AP , AQ );
     printf("2. water | %.2f aed | %d items available \n" , BP, BQ );
-    printf("3. Gatorade | %.2f aed | %d items available \n" , CP , CQ);
+    printf("3. Gatorade | %.2f aed | %d items available \n\n" , CP , CQ);
     break;
     default:
     printf("Please choose  a vaild option.\n ");
